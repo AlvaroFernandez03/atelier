@@ -1,0 +1,9 @@
+node_modules/
+.env
+backend/db/tienda.db
+backend/db/tienda.db-shm
+backend/db/tienda.db-wal
+
+# Copias que deja Claude al hacer cambios (no hace falta subirlas)
+copia-antes-de-cambios-*.zip
+.claude/

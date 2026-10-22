@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Acceder · Atelier</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,100..900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<header class="site-header" id="site-header"></header>
+
+<main class="container">
+  <div class="form-card">
+    <div class="tabs">
+      <button id="tab-login" class="is-active">Iniciar sesión</button>
+      <button id="tab-register">Crear cuenta</button>
+    </div>
+
+    <form id="login-form">
+      <div class="field">
+        <label for="l-email">Email</label>
+        <input type="email" id="l-email" autocomplete="username" required>
+      </div>
+      <div class="field">
+        <label for="l-password">Contraseña</label>
+        <input type="password" id="l-password" autocomplete="current-password" required>
+      </div>
+      <button type="submit" class="btn btn-primary btn-block">Entrar</button>
+      <p id="login-msg" class="form-message"></p>
+    </form>
+
+    <form id="register-form" class="hidden">
+      <div class="field">
+        <label for="r-name">Nombre</label>
+        <input type="text" id="r-name" required>
+      </div>
+      <div class="field">
+        <label for="r-email">Email</label>
+        <input type="email" id="r-email" autocomplete="username" required>
+      </div>
+      <div class="field">
+        <label for="r-password">Contraseña (mín. 6 caracteres)</label>
+        <input type="password" id="r-password" minlength="6" autocomplete="new-password" required>
+      </div>
+      <button type="submit" class="btn btn-primary btn-block">Crear cuenta</button>
+      <p id="register-msg" class="form-message"></p>
+    </form>
+
+    <p style="margin-top:20px; padding-top:18px; border-top:1px solid var(--line); font-size:0.82rem; color:var(--ink-faint); line-height:1.7;">
+      Cuenta de prueba, contraseña <code>cliente123</code>:<br>
+      <code>marta@ejemplo.com</code>
+    </p>
+  </div>
+</main>
+
+<footer class="site-footer" id="site-footer"></footer>
+
+<script src="js/common.js"></script>
+<script src="js/acceso.js"></script>
+</body>
+</html>

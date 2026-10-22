@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Catálogo · Atelier</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,100..900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<header class="site-header" id="site-header"></header>
+
+<main class="container catalog-layout">
+  <aside class="filters" id="filters">
+    <div class="filter-group">
+      <h4>Ordenar por</h4>
+      <select id="sort-select">
+        <option value="novedades">Novedades</option>
+        <option value="precio_asc">Precio: de menor a mayor</option>
+        <option value="precio_desc">Precio: de mayor a menor</option>
+        <option value="nombre">Nombre</option>
+      </select>
+    </div>
+
+    <div class="filter-group">
+      <h4>Marca</h4>
+      <div id="brand-filters"></div>
+    </div>
+
+    <div class="filter-group">
+      <h4>Talla</h4>
+      <div id="size-filters"></div>
+    </div>
+
+    <div class="filter-group">
+      <h4>Color</h4>
+      <div class="color-swatches" id="color-filters"></div>
+    </div>
+
+    <div class="filter-group">
+      <h4>Precio máximo</h4>
+      <input type="range" id="price-range" min="20" max="150" step="5" value="150" style="width:100%;">
+      <div style="display:flex; justify-content:space-between; font-size:0.8rem; color:var(--ink-faint); margin-top:4px;">
+        <span>20 €</span><span id="price-label">150 €</span>
+      </div>
+    </div>
+
+    <button id="clear-filters" class="btn btn-outline btn-sm btn-block">Quitar filtros</button>
+  </aside>
+
+  <section>
+    <div class="catalog-head">
+      <h1 id="catalog-title">Todo el catálogo</h1>
+      <span class="result-count" id="result-count"></span>
+    </div>
+    <div class="product-grid" id="product-grid"></div>
+    <div id="empty-results" class="empty-state hidden">
+      <h3>No hay nada con esos filtros</h3>
+      <p>Prueba a quitar alguno o busca otra cosa.</p>
+      <button class="btn btn-outline" onclick="document.getElementById('clear-filters').click()">Quitar filtros</button>
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer" id="site-footer"></footer>
+
+<script src="js/common.js"></script>
+<script src="js/product-art.js"></script>
+<script src="js/favoritos.js"></script>
+<script src="js/asistente.js"></script>
+<script src="js/catalogo.js"></script>
+</body>
+</html>

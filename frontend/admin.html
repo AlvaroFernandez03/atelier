@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Administración · Atelier</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,100..900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<div class="admin-bar">
+  <div class="container">
+    <strong>Panel de administración</strong>
+    <div style="display:flex; gap:16px; align-items:center;">
+      <a href="index.html">Ver la tienda</a>
+      <a href="#" id="admin-logout">Cerrar sesión</a>
+    </div>
+  </div>
+</div>
+
+<main class="container" style="padding-bottom:80px;">
+  <div id="admin-content">
+    <p style="padding:40px 0;" class="muted">Cargando…</p>
+  </div>
+</main>
+
+<script src="js/common.js"></script>
+<script src="js/product-art.js"></script>
+<script src="js/admin-productos.js"></script>
+<script src="js/admin.js"></script>
+</body>
+</html>

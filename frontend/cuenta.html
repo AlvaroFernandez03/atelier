@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Mi cuenta · Atelier</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,100..900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<header class="site-header" id="site-header"></header>
+
+<main class="container">
+  <div class="account-head">
+    <div>
+      <h1 id="account-name">Mi cuenta</h1>
+      <p class="muted" id="account-email" style="font-size:0.9rem;"></p>
+    </div>
+    <button id="logout-btn" class="btn btn-outline btn-sm">Cerrar sesión</button>
+  </div>
+
+  <section style="padding-bottom:80px;">
+    <div class="account-tabs">
+      <button id="tab-pedidos" class="account-tab is-active">Mis pedidos</button>
+      <button id="tab-devoluciones" class="account-tab">Mis devoluciones</button>
+      <button id="tab-favoritos" class="account-tab">Favoritos</button>
+      <button id="tab-ajustes" class="account-tab">Ajustes</button>
+    </div>
+
+    <div id="orders-list"></div>
+    <div id="returns-list" class="hidden"></div>
+    <div id="favorites-list" class="hidden"></div>
+    <div id="settings-panel" class="hidden"></div>
+  </section>
+</main>
+
+<footer class="site-footer" id="site-footer"></footer>
+
+<script src="js/common.js"></script>
+<script src="js/product-art.js"></script>
+<script src="js/favoritos.js"></script>
+<script src="js/cuenta.js"></script>
+</body>
+</html>
